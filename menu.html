@@ -1,0 +1,69 @@
+<html> 
+<head> 
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf8"> 
+</head> 
+ 
+<body> 
+<h2 align=center>動態下拉式選單：兩框連動（兩層樹狀選項）</h2> 
+<hr> 
+ 
+<script> 
+department=new Array();
+department[0]=["張隆紋", "黃能富", "王炳豐", "張世杰", "張智星"];	// 資訊系
+department[1]=["黃瑞星", "黃仲陵", "呂忠津", "鄭博泰", "盧向成"];	// 電機系
+department[2]=["楊敬堂", "王培仁", "葉銘權", "宋鎮國"];			// 動機系
+department[3]=["王天戈", "開執中", "梁正宏"];				// 工科系
+
+drink = new Array();
+drink[0]=["今日咖啡 Iced Coffee Today",
+ 	 	"美式冰咖啡 Iced Americano",
+ 	 	"黑鑽咖啡 Iced Crystal Jelly Coffee",
+ 	 	"招牌冰咖啡 85℃ Iced Coffee",
+ 	 	"黑糖鴛鴦咖啡 Iced Brown Sugar Milk TeaCoffee",
+ 	 	"烤榛果冰咖啡 Iced Roast Hazelnut Coffee",
+ 	 	"拿鐵冰咖啡 Iced Coffee Latte",
+ 	 	"重拿鐵冰咖啡 Iced Coffee Latte Double",
+ 	 	"冰卡布奇諾 Iced Cappuccino",
+ 	 	"冰焦糖瑪奇朵 Iced Caramel Macchiatto",
+ 	 	"法式榛果冰拿鐵 Iced French Hazel Latte",
+ 	 	"法式焦糖冰拿鐵 Iced French Caramel Latte"];
+
+drink[1] = [""今日熱咖啡 Hot Coffee Today",
+ 	 	美式熱咖啡 Hot Americano",	NT.35	●
+ 	 	黑鑽熱咖啡 Hot Crystal Jelly Coffee",	NT.40	●
+ 	 	招牌熱咖啡 85℃ Hot Coffee",	NT.40	●
+ 	 	熱黑糖鴛鴦咖啡 Hot Brown Sugar Milk TeaCoffee",	NT.40	●
+ 	 	烤榛果熱咖啡 Hot Roast Hazelnut Coffee",	NT.45	●
+ 	 	拿鐵熱咖啡 Hot Coffee Latte",	NT.50	●
+ 	 	重拿鐵熱咖啡 Hot Coffee Latte Double",	NT.50	●
+ 	 	熱卡布奇諾 Hot Cappuccino",	NT.50	●
+ 	 	熱焦糖瑪奇朵 Hot Caramel Macchiatto",	NT.60	●
+ 	 	法式榛果熱拿鐵 Hot French Hazel Latte",	NT.60	●
+ 	 	法式焦糖熱拿鐵 Hot French Caramel Latte",	NT.60	●
+
+function renew(index){
+	for(var i=0;i<drink[index].length;i++)
+		document.myForm.member.options[i]=new Option(drink[index][i], i);
+	document.myForm.member.length=department[index].length;
+}
+</script> 
+ 
+<form name="myForm"> 
+系別：
+<select size=5 onChange="renew(this.selectedIndex);"> 
+	<option value="資訊系">冰咖啡系列
+	<option value="電機系">熱咖啡系列
+	<option value="動機系">動機系
+	<option value="工科系">工科系
+</select> 
+ 
+隊員：
+<select name="member" size=5> 
+	<option value="">請由左方選取系別
+</select> 
+</form> 
+ 
+<hr> 
+</body> 
+</html>
+
