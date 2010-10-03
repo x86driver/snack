@@ -10,9 +10,24 @@
 
 <center>
 <!-- <input value="Ajax請求" onclick="startRequest();" type="button"> -->
-<input type="radio" name="temperature" value="0" onclick="startRequest(this.value);"/>冰<br />
-<input type="radio" name="temperature" value="1" onclick="startRequest(this.value);"/>熱<br />
 
+工號: <input type="text" name="id"/><br />
+
+<select id="drink" onfocus="show_temp(this.value);">
+<option value="coffee">咖啡系列</option>
+<option value="tea">茶系列</option>
+<!--
+<option value="milk">奶茶系列</option>
+<option value="ice">冰沙系列</option>
+<option value="sea">海岩系列</option>
+<option value="jelly">凍飲系列</option>
+-->
+</select>
+
+<br />
+
+<input type="radio" id="temp0" name="temperature" value="0" disabled="true" onclick="query_drink(drink.value, this.value);"/>冰<br />
+<input type="radio" id="temp1" name="temperature" value="1" disabled="true" onclick="query_drink(drink.value, this.value);"/>熱<br />
 
 <br>
 <div id="response"></div>

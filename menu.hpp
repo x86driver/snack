@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-string cold_coffee[] = {
+string coffee[2][] = {{
                 "今日咖啡 Iced Coffee Today",
                 "美式冰咖啡 Iced Americano",
                 "黑鑽咖啡 Iced Crystal Jelly Coffee",
@@ -14,9 +14,7 @@ string cold_coffee[] = {
                 "冰焦糖瑪奇朵 Iced Caramel Macchiatto",
                 "法式榛果冰拿鐵 Iced French Hazel Latte",
                 "法式焦糖冰拿鐵 Iced French Caramel Latte"
-};
-
-string hot_coffee[] = {
+		}, {
                 "今日熱咖啡 Hot Coffee Today",
                 "美式熱咖啡 Hot Americano",
                 "黑鑽熱咖啡 Hot Crystal Jelly Coffee",
@@ -29,7 +27,7 @@ string hot_coffee[] = {
                 "熱焦糖瑪奇朵 Hot Caramel Macchiatto",
                 "法式榛果熱拿鐵 Hot French Hazel Latte",
                 "法式焦糖熱拿鐵 Hot French Caramel Latte",
-};
+}};
 
 string cold_tea[] = {
 		"茉莉鮮綠茶 Jasmine Fresh Green Tea",
